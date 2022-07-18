@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
 import MovieCard from "../Components/MovieCard";
-import {CgSpinnerTwoAlt} from 'react-icons/cg'
+import {ImSpinner} from 'react-icons/im'
 
 import './Home.css'
 
-const apiKey = import.meta.env.VITE_API_KEY
-const apiURL = import.meta.env.VITE_API
-
 const Home = () => {
+
 
     const [trailerURL, setTrailerURL] = useState('')
     const [topMovies, setTopMovies] = useState([])
@@ -37,7 +35,7 @@ const Home = () => {
             <h2 className="title__home">Filmes melhores avaliados na plataforma</h2>
 
             <div className="container" onClick={() => setTrailerURL('') }>
-                {topMovies.length === 0 && <p>Carregando dados...  <CgSpinnerTwoAlt/> </p>}
+                {topMovies.length === 0 && <p>Carregando dados...  <ImSpinner/> </p>}
 
                 {topMovies.length > 0 && topMovies.map(movie =>
                     <MovieCard

@@ -1,15 +1,9 @@
 
 import { FaStar } from 'react-icons/fa'
 import { Link } from 'react-router-dom';
-import movieTrailer from 'movie-trailer';
-import ReactPlayer from 'react-player'
-import { useState } from 'react';
-
 
 import './MovieCard.css'
 
-
-const imgURL = import.meta.env.VITE_IMG
 
 const MovieCard = ({ movie, showLink = true, onClick }) => {
 
@@ -17,7 +11,7 @@ const MovieCard = ({ movie, showLink = true, onClick }) => {
 
         <div className='movie-container' onClick={onClick}>
             <img
-                src={imgURL + movie.poster_path}
+                src={'https://image.tmdb.org/t/p/w500/' + movie.poster_path}
                 alt={movie.name}
 
             />
@@ -29,7 +23,6 @@ const MovieCard = ({ movie, showLink = true, onClick }) => {
 
 
         </div>
-
 
     )
 }
