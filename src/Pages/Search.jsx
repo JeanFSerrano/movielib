@@ -33,7 +33,7 @@ const Search = () => {
 
     useEffect(() => {
 
-        const searchQuery = `${searchURL}?${apiKey}&query=${query}&language=pt-br`
+        const searchQuery = `https://api.themoviedb.org/3/search/movie/?api_key=b24b18a5ebe96cd8e85f00d58719d7ff&query=${query}&language=pt-br`
 
         getSearchedMovies(searchQuery)
 

@@ -22,7 +22,7 @@ const Home = () => {
 
     useEffect(() => {
 
-        const topRatedURL = `${apiURL}top_rated?${apiKey}&language=pt-br`
+        const topRatedURL = `https://api.themoviedb.org/3/movie/top_rated?api_key=b24b18a5ebe96cd8e85f00d58719d7ff&language=pt-br`
 
         getTopRatedMovies(topRatedURL)
 
