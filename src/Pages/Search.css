@@ -1,0 +1,30 @@
+.search__container-results {
+    width: 90%;
+    height: 100vh;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2.5rem;
+
+}
+
+.search__container-results div:hover {
+    transform: scale(1.05);
+}
+
+.search__container-results img {
+    max-width: 100%;
+}
+
+
+.search__title {
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+}
+
+.query-text {
+    color: #f7d454;
+}

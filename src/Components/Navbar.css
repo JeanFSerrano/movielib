@@ -1,0 +1,62 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+    background-color: #222;
+}
+
+.navbar h2 a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.navbar__camera {
+    font-size: 2rem;
+  
+}
+
+.navbar__title {
+    display: block;
+}
+
+
+.navbar form {
+    display: flex;
+    gap: .5rem
+}
+
+.navbar input {
+    padding: .2rem .8rem;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+}
+
+.navbar form button {
+    background-color: #f7d354;
+    border: 2px solid #f7d354;
+    border-radius: 4px;
+    color: black;
+    padding: .3rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: -1rem;
+    transition: .4s;
+}
+
+.navbar form button:hover {
+    background-color: #d3b23b;
+    border: 2px solid #d6aa0c;
+    
+}
+
+@media (max-width: 517px) {
+    .navbar h2 {
+        display: none;
+        margin-left: 2rem;
+    }
+}
