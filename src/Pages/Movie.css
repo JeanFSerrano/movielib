@@ -30,8 +30,8 @@
 }
 
 .movie__page div {
-    min-width: 300px; 
-    
+    min-width: 300px;
+
 }
 
 .trailer {
@@ -55,7 +55,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     margin-left: 1rem;
-    
+
 }
 
 .movie__tagline {
@@ -96,5 +96,39 @@
     margin-top: 1.5rem;
     line-height: 1.1rem;
     padding-right: 4rem;
+
+}
+
+
+@media (max-width: 994px) {
+    .movie__page {
+        width: 80%;
+        padding-left: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 90vh;
+    }
+
+    .movie__page button {
+        position: absolute;
+        top: 97%;
+        right: 56%;
+    }
+
+    .movie__details {
+        display: flex;
+        width: 50%;
+        margin-top: 2rem;
+        justify-content: flex-start;
+    }
+
+    .movie__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
 
 }

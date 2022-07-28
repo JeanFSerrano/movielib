@@ -1,16 +1,14 @@
 import { useState, useEffect } from "react";
-import { useSearchParams, Navigate, useNavigate } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import MovieCard from "../Components/MovieCard";
 
 import './Search.css'
 
-
-const searchURL = import.meta.env.VITE_SEARCH
+const searchUrl = import.meta.env.VITE_SEARCH
 const apiKey = import.meta.env.VITE_API_KEY
 
-
-
 const Search = () => {
+
 
     const navigate = useNavigate()
 
@@ -33,7 +31,7 @@ const Search = () => {
 
     useEffect(() => {
 
-        const searchQuery = `https://api.themoviedb.org/3/search/movie/?api_key=b24b18a5ebe96cd8e85f00d58719d7ff&query=${query}&language=pt-br`
+        const searchQuery = `${searchUrl}?${apiKey}&query=${query}&language=pt-br`
 
         getSearchedMovies(searchQuery)
 
@@ -47,13 +45,14 @@ const Search = () => {
 
             <h2 className="search__title">Mostrando resultados de busca para: <span className="query-text"> {query}</span></h2>
 
-
             <div className="search__container-results">
                 {movies.length > 0 &&
                     movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
+
+                {movies.length === 0 && (
+                    <p>Não foram encontrados resultados de busca com {query}</p>
+                )}
             </div>
-
-
 
         </div>
 

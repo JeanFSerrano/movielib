@@ -8,6 +8,7 @@ import './MovieCard.css'
 
 const MovieCard = ({ movie, showLink = true, onClick }) => {
 
+    const posterImg = import.meta.env.VITE_IMG
     const moviePoster = movie.poster_path
 
     return (
@@ -19,7 +20,7 @@ const MovieCard = ({ movie, showLink = true, onClick }) => {
             )}
 
             <img
-                src={`https://image.tmdb.org/t/p/w500/${moviePoster}`}
+                src={`${posterImg}${moviePoster}`}
                 alt={movie.name}
 
             />

@@ -3,19 +3,19 @@ div {
 }
 
 .container {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 3rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    column-gap: 1.7rem;
+    column-gap: 2.2rem;
     row-gap: 2em;
-    
+
 }
 
 .container div:hover {
     transform: scale(1.05);
-   
+
 }
 
 .container img {
@@ -27,4 +27,14 @@ div {
     color: #f7d454;
     margin-top: 2rem;
     margin-bottom: -1.5rem;
+}
+
+@media (max-width: 501px) {
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
 }

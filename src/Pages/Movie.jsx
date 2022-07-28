@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { BsGraphUp, BsWallet2, BsHourglassSplit, BsFillFileEarmarkRichtextFill, BsCalendarDate, BsCalendarEvent, BsTagFill, BsTag } from 'react-icons/bs'
+import { BsGraphUp, BsWallet2, BsHourglassSplit, BsFillFileEarmarkRichtextFill, BsCalendarDate, BsTag } from 'react-icons/bs'
 import MovieCard from "../Components/MovieCard";
 
 import './Movie.css'
@@ -8,18 +8,14 @@ import { format, parseISO } from "date-fns/esm";
 import ReactPlayer from "react-player";
 import movieTrailer from "movie-trailer";
 
-
 const apiKey = import.meta.env.VITE_API_KEY
 const apiURL = import.meta.env.VITE_API
-
 
 const Movie = () => {
 
     const { id } = useParams()
     const [movie, setMovie] = useState(null)
     const [trailerURL, setTrailerURL] = useState()
-
-
 
     const getMoveDetails = async (url) => {
         const res = await fetch(url)
@@ -47,13 +43,11 @@ const Movie = () => {
         }
     }
 
-
     useEffect(() => {
 
         const moveDetailsURL = `${apiURL}${id}?${apiKey}&language=pt-br`
 
         getMoveDetails(moveDetailsURL)
-
 
     }, []);
 
@@ -116,14 +110,6 @@ const Movie = () => {
                 </div>
 
             )}
-
-
-
-
-
-
-
-
 
         </div>);
 }
